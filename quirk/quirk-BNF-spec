@@ -6,9 +6,19 @@
 
 <FunctionDeclaration> -> function <Name> ( <NameList> ) { <Program> <Return> }
 
+
+//multiple return types? if not, -> return <Expression>
 <Return> -> return <ParameterList>
 
 <Assignment> -> <Name> = <Expression>
+
+<Assignment> -> <SingleAssignment> | <MultipleAssignment>
+
+<SingleAssignment> -> <Name> = <Expression>
+
+
+//size of NameList has to match the number of return values from the FunctionCall
+<MultipleAssignment> -> <NameList> = <FunctionCall>
 
 <Print> -> print <Expression>
 
@@ -28,7 +38,7 @@
 
 <Factor> -> <SubExpression> | <SubExpression> ^ <Factor> | <Value> ^ <Factor> | <Value> | <FunctionCall>
 
-<FunctionCall> -> <Name> ( <ParameterList> )
+<FunctionCall> -> <Name> ( <ParameterList> ) | <Name> ( <ParameterList> ) : <Index>
 
 <SubExpression> -> ( <Expression> )
 
@@ -36,6 +46,10 @@
 
 
 
+
+
 <Name> = [0-9,a-z,A-Z,_]+
 
 <Number> = [-]?[0-9]*[\.][0-9]*
+
+<Index> -> [0-9]+
