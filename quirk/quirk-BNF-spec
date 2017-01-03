@@ -1,0 +1,41 @@
+<Program> -> <Statement> | <Statement> <Statement>
+
+<Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Assignment> | <Print>
+
+<VarDeclaration> -> var <Name> = <Expression>
+
+<FunctionDeclaration> -> function <Name> ( <NameList> ) { <Program> <Return> }
+
+<Return> -> return <ParameterList>
+
+<Assignment> -> <Name> = <Expression>
+
+<Print> -> print <Expression>
+
+
+
+<NameList> -> <Name> | <Name> , <NameList>
+
+<ParameterList> -> <Parameter> | <Parameter> , <ParameterList>
+
+<Parameter> -> <Name> | <Expression>
+
+
+
+<Expression> -> <Term> | <Expression> + <Term> | <Expression> - <Term>
+
+<Term> -> <Factor> | <Term> * <Factor> | <Term> / <Factor>
+
+<Factor> -> <SubExpression> | <SubExpression> ^ <Factor> | <Value> ^ <Factor> | <Value> | <FunctionCall>
+
+<FunctionCall> -> <Name> ( <ParameterList> )
+
+<SubExpression> -> ( <Expression> )
+
+<Value> -> <Name> | <Number>
+
+
+
+<Name> = [0-9,a-z,A-Z,_]+
+
+<Number> = [-]?[0-9]*[\.][0-9]*
