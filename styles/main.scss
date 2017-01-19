@@ -1,0 +1,22 @@
+//google fonts
+@import url("https://fonts.googleapis.com/css?family=Monda|Offside");
+
+$monda: 'Monda', serif;
+$offside: 'Offside', serif;
+
+.syllabus {
+	font-family: $monda;
+}
+
+h1, h2, h3 {
+	font-family: $offside;
+}
+
+
+h1 + p, h2 + p, h3 + p {
+	text-indent: 0;
+}
+
+p {
+	text-indent: 3em;
+}

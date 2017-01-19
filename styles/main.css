@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Monda|Offside");
+.syllabus {
+  font-family: "Monda", serif;
+}
+
+h1, h2, h3 {
+  font-family: "Offside", serif;
+}
+
+h1 + p, h2 + p, h3 + p {
+  text-indent: 0;
+}
+
+p {
+  text-indent: 3em;
+}
