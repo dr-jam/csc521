@@ -14,3 +14,27 @@ h1 + p, h2 + p, h3 + p {
 p {
   text-indent: 3em;
 }
+
+table thead {
+  font-weight: bold;
+}
+
+table .colWeek {
+  width: 10%;
+}
+
+table .colDates {
+  width: 10%;
+}
+
+table .colTopic {
+  width: 15%;
+}
+
+table .colMaterial {
+  width: 60%;
+}
+
+.resourceList {
+  list-style-type: none;
+}
