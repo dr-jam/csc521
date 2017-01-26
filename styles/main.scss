@@ -21,7 +21,7 @@ p {
 	text-indent: 3em;
 }
 
-table {
+.schedule {
 	thead {
 		font-weight: bold;
 	}
@@ -36,6 +36,10 @@ table {
 	}
 	.colMaterial{
 		width: 60%;
+	}
+	td {
+		padding: 10px;
+		vertical-align: top;
 	}
 }
 
