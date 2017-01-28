@@ -1,0 +1,27 @@
+//duples of token:lexeme
+
+//keywords
+VAR:var
+FUNCTION:function
+RETURN:return
+PRINT:print
+
+//operators
+ASSIGN:=
+ADD:+
+SUB:-
+MULT:*
+DIV:/
+EXP:^
+
+//Separators
+LPAREN:(
+RPAREN:)
+LBRACE:{
+RBRACE:}
+COMMA:,
+COLON::
+
+//literals
+NUMBER:[+-]?( (\d+ (\.\d*)?) (\.\d+) )
+IDENTS: [a-zA-Z0-1_]

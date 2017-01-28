@@ -12,6 +12,7 @@
 
 <Assignment> -> <Name> = <Expression>
 
+//support for naming all values returned from functions
 <Assignment> -> <SingleAssignment> | <MultipleAssignment>
 
 <SingleAssignment> -> <Name> = <Expression>
