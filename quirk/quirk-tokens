@@ -24,4 +24,5 @@ COLON::
 
 //literals
 NUMBER:[+-]?( (\d+ (\.\d*)?) (\.\d+) )
-IDENTS: [a-zA-Z0-1_]
+IDENTS: [a-zA-Z]+[a-zA-Z0-1_]*
+INDEX: [0-9]+
