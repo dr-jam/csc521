@@ -1,0 +1,11 @@
+result = oldsum - value / 100;
+
+IDENT:result 
+
+tokens:
+IDENT
+ASSIGN
+SUB
+DIV
+NUMBER
+EOS
