@@ -12,3 +12,8 @@ var distance = SquareDistance(2, 3, 5, 6)
 
 //output of lexer
 FUNCTION IDENT:SquareDistance LPAREN IDENT:x1 COMMA IDENT:y1 COMMA IDENT:x2 COMMA IDENT:y2 RPAREN LBRACE RETURN IDENT:x1 EXP IDENT:x2 ADD IDENT:y1 EXP IDENT:y2 RBRACE VAR IDENT:distance ASSIGN IDENT:SquareDistance LPAREN NUMBER:2 COMMA NUMBER:3 COMMA NUMBER:5 COMMA NUMBER:6 RPAREN
+
+
+//errors
+varx = 3
+//statement can't start with an identifier
