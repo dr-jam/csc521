@@ -1,6 +1,6 @@
 result = oldsum - value / 100;
 
-IDENT:result 
+IDENT:result ASSIGN INDENT:oldsum SUB IDENT:value DIV NUMBER:100 EOS
 
 tokens:
 IDENT
