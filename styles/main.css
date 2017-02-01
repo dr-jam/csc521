@@ -20,7 +20,7 @@ p {
 }
 
 .schedule .colWeek {
-  width: 10%;
+  width: 13%;
 }
 
 .schedule .colDates {
@@ -32,7 +32,7 @@ p {
 }
 
 .schedule .colMaterial {
-  width: 60%;
+  width: 57%;
 }
 
 .schedule td {
@@ -42,4 +42,10 @@ p {
 
 .resourceList {
   list-style-type: none;
+}
+
+.fullPageContent {
+  margin-left: 20px;
+  width: 90%;
+  max-width: 800px;
 }

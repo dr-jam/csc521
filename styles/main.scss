@@ -26,7 +26,7 @@ p {
 		font-weight: bold;
 	}
 	.colWeek {
-		width: 10%;
+		width: 13%;
 	}
 	.colDates {
 		width: 10%;
@@ -35,7 +35,7 @@ p {
 		width: 15%;
 	}
 	.colMaterial{
-		width: 60%;
+		width: 57%;
 	}
 	td {
 		padding: 10px;
@@ -45,4 +45,9 @@ p {
 
 .resourceList {
 	list-style-type: none;
+}
+.fullPageContent {
+  margin-left: 20px;
+  width: 90%;
+  max-width: 800px;
 }
