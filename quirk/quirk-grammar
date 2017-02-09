@@ -1,16 +1,16 @@
 <Program> -> <Statement> | <Statement> <Program>
 
-<Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Assignment> | <Print>
+<Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Print>
 
 <VarDeclaration> -> var <Name> = <Expression>
 
-<FunctionDeclaration> -> function <Name> ( <NameList> ) { <Program> <Return> }
+<FunctionDeclaration> -> FUNCTION <Name> LPAREN <NameList> RPAREN LBRACE <Program> <Return> RBRACE
 
 
 //multiple return types? if not, -> return <Expression>
-<Return> -> return <ParameterList>
+<Return> -> RETURN <ParameterList>
 
-<Assignment> -> var <Name> = <Expression>
+//REMOVED AS IT IS REDUNDANT <Assignment> -> var <Name> = <Expression>
 
 //support for naming all values returned from functions
 <Assignment> -> <SingleAssignment> | <MultipleAssignment>
