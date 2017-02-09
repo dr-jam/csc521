@@ -1,4 +1,4 @@
-<Program> -> <Statement> | <Statement> <Statement>
+<Program> -> <Statement> | <Statement> <Program>
 
 <Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Assignment> | <Print>
 
@@ -10,7 +10,7 @@
 //multiple return types? if not, -> return <Expression>
 <Return> -> return <ParameterList>
 
-<Assignment> -> <Name> = <Expression>
+<Assignment> -> var <Name> = <Expression>
 
 //support for naming all values returned from functions
 <Assignment> -> <SingleAssignment> | <MultipleAssignment>
@@ -19,7 +19,7 @@
 
 
 //size of NameList has to match the number of return values from the FunctionCall
-<MultipleAssignment> -> <NameList> = <FunctionCall>
+<MultipleAssignment> -> var <NameList> = <FunctionCall>
 
 <Print> -> print <Expression>
 
