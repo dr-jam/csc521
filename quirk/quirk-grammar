@@ -1,8 +1,6 @@
 <Program> -> <Statement> | <Statement> <Program>
 
-<Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Assignment> | <Print>
-
-<VarDeclaration> -> VAR <Name> ASSIGN <Expression>
+<Statement> -> <FunctionDeclaration> | <Assignment> | <Print>
 
 <FunctionDeclaration> -> FUNCTION <Name> LPAREN <NameList> RPAREN LBRACE <FunctionBody> RBRACE
 
