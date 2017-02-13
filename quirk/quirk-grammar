@@ -1,47 +1,45 @@
 <Program> -> <Statement> | <Statement> <Program>
 
-<Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Print>
+<Statement> -> <VarDeclaration> | <FunctionDeclaration> | <Assignment> | <Print>
 
-<VarDeclaration> -> var <Name> = <Expression>
+<VarDeclaration> -> VAR <Name> ASSIGN <Expression>
 
-<FunctionDeclaration> -> FUNCTION <Name> LPAREN <NameList> RPAREN LBRACE <Program> <Return> RBRACE
+<FunctionDeclaration> -> FUNCTION <Name> LPAREN <NameList> RPAREN LBRACE <FunctionBody> RBRACE
 
+<FunctionBody> -> <Return> | <Program> <Return>
 
-//multiple return types? if not, -> return <Expression>
 <Return> -> RETURN <ParameterList>
-
-//REMOVED AS IT IS REDUNDANT <Assignment> -> var <Name> = <Expression>
 
 //support for naming all values returned from functions
 <Assignment> -> <SingleAssignment> | <MultipleAssignment>
 
-<SingleAssignment> -> <Name> = <Expression>
+<SingleAssignment> -> VAR <Name> ASSIGN <Expression>
 
 
 //size of NameList has to match the number of return values from the FunctionCall
-<MultipleAssignment> -> var <NameList> = <FunctionCall>
+<MultipleAssignment> -> VAR <NameList> ASSIGN <FunctionCall>
 
-<Print> -> print <Expression>
+<Print> -> PRINT <Expression>
 
 
 
-<NameList> -> <Name> | <Name> , <NameList>
+<NameList> -> <Name> | <Name> COMMA <NameList>
 
-<ParameterList> -> <Parameter> | <Parameter> , <ParameterList>
+<ParameterList> -> <Parameter> | <Parameter> COMMA <ParameterList>
 
 <Parameter> -> <Name> | <Expression>
 
 
 
-<Expression> -> <Term> | <Expression> + <Term> | <Expression> - <Term>
+<Expression> -> <Term> | <Expression> ADD <Term> | <Expression> SUB <Term>
 
-<Term> -> <Factor> | <Term> * <Factor> | <Term> / <Factor>
+<Term> -> <Factor> | <Term> MULT <Factor> | <Term> DIV <Factor>
 
-<Factor> -> <SubExpression> | <SubExpression> ^ <Factor> | <Value> ^ <Factor> | <Value> | <FunctionCall>
+<Factor> -> <SubExpression> | <SubExpression> EXP <Factor> | <Value> EXP <Factor> | <Value> | <FunctionCall>
 
-<FunctionCall> -> <Name> ( <ParameterList> ) | <Name> ( <ParameterList> ) : <Index>
+<FunctionCall> -> <Name> LPAREN <ParameterList> RPAREN | <Name> LPAREN <ParameterList> RPAREN COLON <Number>
 
-<SubExpression> -> ( <Expression> )
+<SubExpression> -> LPAREN <Expression> RPAREN
 
 <Value> -> <Name> | <Number>
 
@@ -53,4 +51,4 @@
 
 <Number> = NUMBER
 
-<Index> -> INDEX
+//removed! <Index> -> INDEX
