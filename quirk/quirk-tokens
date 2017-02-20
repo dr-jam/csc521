@@ -23,7 +23,7 @@ COMMA:,
 COLON::
 
 //literals
-NUMBER:[+-]?((\d+(\.\d*)?)|(\.\d+))
+NUMBER:((\d+(\.\d*)?)|(\.\d+))
 IDENT: [a-zA-Z]+[a-zA-Z0-9_]*
 
 //removed due to ambiguity! INDEX: [0-9]+

@@ -50,6 +50,6 @@
 
 
 //Literals
-<Name> = IDENT
+<Name> -> IDENT | SUB IDENT | ADD IDENT
 
-<Number> = NUMBER
+<Number> -> NUMBER | SUB NUMBER | ADD NUMBER
