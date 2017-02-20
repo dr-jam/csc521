@@ -1,14 +1,19 @@
-<Program> -> <Statement> | <Statement> <Program>
+<Program> -> <Statement> <Program> | <Statement>
 
 <Statement> -> <FunctionDeclaration> | <Assignment> | <Print>
 
-<FunctionDeclaration> -> FUNCTION <Name> LPAREN <NameList> RPAREN LBRACE <FunctionBody> RBRACE
+
+//function declaration statements
+<FunctionDeclaration> -> FUNCTION <Name> <FunctionParams> LBRACE <FunctionBody> RBRACE
+
+<FunctionParams> -> LPAREN RPAREN | LPAREN <NameList> RPAREN
 
 <FunctionBody> -> <Return> | <Program> <Return>
 
 <Return> -> RETURN <ParameterList>
 
-//support for naming all values returned from functions
+
+//Assignment statements
 <Assignment> -> <SingleAssignment> | <MultipleAssignment>
 
 <SingleAssignment> -> VAR <Name> ASSIGN <Expression>
@@ -17,10 +22,12 @@
 //size of NameList has to match the number of return values from the FunctionCall
 <MultipleAssignment> -> VAR <NameList> ASSIGN <FunctionCall>
 
+
+//print statements
 <Print> -> PRINT <Expression>
 
 
-
+//name and parameter list
 <NameList> -> <Name> | <Name> COMMA <NameList>
 
 <ParameterList> -> <Parameter> | <Parameter> COMMA <ParameterList>
@@ -28,7 +35,7 @@
 <Parameter> -> <Name> | <Expression>
 
 
-
+//arithmetic expressions
 <Expression> -> <Term> | <Expression> ADD <Term> | <Expression> SUB <Term>
 
 <Term> -> <Factor> | <Term> MULT <Factor> | <Term> DIV <Factor>
@@ -42,11 +49,7 @@
 <Value> -> <Name> | <Number>
 
 
-
-
-
+//Literals
 <Name> = IDENT
 
 <Number> = NUMBER
-
-//removed! <Index> -> INDEX
