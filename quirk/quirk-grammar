@@ -8,7 +8,7 @@
 
 <FunctionParams> -> <NameList> RPAREN | RPAREN
 
-<FunctionBody> -> <Return> | <Program> <Return>
+<FunctionBody> -> <Program> <Return> | <Return>
 
 <Return> -> RETURN <ParameterList>
 
@@ -28,11 +28,11 @@
 
 
 //name and parameter list
-<NameList> -> <Name> | <Name> COMMA <NameList>
+<NameList> -> <Name> COMMA <NameList> | <Name>
 
-<ParameterList> -> <Parameter> | <Parameter> COMMA <ParameterList>
+<ParameterList> -> <Parameter> COMMA <ParameterList> | <Parameter>
 
-<Parameter> -> <Name> | <Expression>
+<Parameter> -> <Expression> | <Name>
 
 
 //arithmetic expressions
