@@ -4,9 +4,9 @@
 
 
 //function declaration statements
-<FunctionDeclaration> -> FUNCTION <Name> <FunctionParams> LBRACE <FunctionBody> RBRACE
+<FunctionDeclaration> -> FUNCTION <Name> LPAREN <FunctionParams> LBRACE <FunctionBody> RBRACE
 
-<FunctionParams> -> LPAREN RPAREN | LPAREN <NameList> RPAREN
+<FunctionParams> -> <NameList> RPAREN | RPAREN
 
 <FunctionBody> -> <Return> | <Program> <Return>
 
@@ -36,13 +36,15 @@
 
 
 //arithmetic expressions
-<Expression> -> <Term> | <Expression> ADD <Term> | <Expression> SUB <Term>
+<Expression> -> <Term> ADD <Expression> | <Term> SUB <Expression> | <Term>
 
-<Term> -> <Factor> | <Term> MULT <Factor> | <Term> DIV <Factor>
+<Term> -> <Factor> MULT <Term> | <Factor> DIV <Term> | <Factor>
 
-<Factor> -> <SubExpression> | <SubExpression> EXP <Factor> | <Value> EXP <Factor> | <Value> | <FunctionCall>
+<Factor> -> <SubExpression> EXP <Factor> | <SubExpression> | <FunctionCall> | <Value> EXP <Factor> | <Value>
 
-<FunctionCall> -> <Name> LPAREN <ParameterList> RPAREN | <Name> LPAREN <ParameterList> RPAREN COLON <Number>
+<FunctionCall> ->  <Name> LPAREN <FunctionCallParams> COLON <Number> | <Name> LPAREN <FunctionCallParams>
+
+<FunctionCallParams> ->  <ParameterList> RPAREN | RPAREN
 
 <SubExpression> -> LPAREN <Expression> RPAREN
 
