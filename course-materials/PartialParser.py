@@ -15,7 +15,7 @@ tokens = ["NUMBER:9", "ADD", "LPAREN", "IDENT:X",
 tokens = ["LPAREN", "IDENT:X", "SUB", "NUMBER:4", "RPAREN", "EOF"]
 tokens = ["IDENT:FOO", "LPAREN", "RPAREN", "EOF"]
 tokens = ["IDENT:FOO", "LPAREN", "RPAREN", "COLON", "NUMBER:0", "EOF"]
-
+tokens = ["SUB", "IDENT:X", "EOF"]
 
 #begin utilities
 def is_ident(tok):
