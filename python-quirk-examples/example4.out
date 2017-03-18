@@ -1,0 +1,9 @@
+ERROR: variable baz_func was not found in scope stack!
+ERROR: variable a was not found in scope stack!
+ERROR: variable b was not found in scope stack!
+ERROR: variable v was not found in scope stack!
+ERROR: variable w was not found in scope stack!
+ERROR: variable y was not found in scope stack!
+100
+-7.0
+results: None

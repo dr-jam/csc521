@@ -1,0 +1,3 @@
+ERROR: variable foo_func was not found in scope stack!
+[256.0]
+results: None
