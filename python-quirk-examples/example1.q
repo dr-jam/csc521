@@ -1,1 +1,1 @@
-print x + 4 - 3
+print 1 + 4 - 3

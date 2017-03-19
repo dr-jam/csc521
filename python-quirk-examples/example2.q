@@ -1,1 +1,2 @@
-var x = (5 * 2) / 5 
+var x = (5 * 2) / 5
+print x
