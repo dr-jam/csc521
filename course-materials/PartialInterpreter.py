@@ -376,17 +376,18 @@ def Number2(pt, scope):
 
 #corresponds to: print 1 + 4 - 3
 e1tree = ['Program1',
-  ['Statement2',
-   ['Print0',
-    'PRINT',
-    ['Expression0',
-     ['Term2', ['Factor4', ['Value0', ['Name0', 'IDENT:x']]]],
-     'ADD',
-     ['Expression1',
-      ['Term2', ['Factor4', ['Value1', ['Number0', 'NUMBER:4']]]],
-      'SUB',
-      ['Expression2',
-       ['Term2', ['Factor4', ['Value1', ['Number0', 'NUMBER:3']]]]]]]]]]
+ ['Statement2',
+  ['Print0',
+   'PRINT',
+   ['Expression0',
+    ['Term2', ['Factor4', ['Value1', ['Number0', 'NUMBER:1']]]],
+    'ADD',
+    ['Expression1',
+     ['Term2', ['Factor4', ['Value1', ['Number0', 'NUMBER:4']]]],
+     'SUB',
+     ['Expression2',
+      ['Term2', ['Factor4', ['Value1', ['Number0', 'NUMBER:3']]]]]]]]]]
+
 
 if __name__ == '__main__':
     #choose a parse tree and initial scope
